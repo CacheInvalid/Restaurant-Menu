@@ -8,6 +8,8 @@ The design of this document is different from the original design template that 
 However, some features within this projet dont work as well as they should such as the update and add items sections, 
 although i know how to rectify them, i ran out of time and need to submit my project to meet the deadline.
 
+A test case doc is included in this upload too
+
 
 The new features that are added to this are: 
 - Logging Page dedicated to either logging in, signing in, or viewing menu

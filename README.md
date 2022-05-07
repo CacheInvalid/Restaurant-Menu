@@ -20,7 +20,7 @@ The new features that are added to this are:
 
 
 
-My reason for changng the design from its original model was so that it provided a more friendly UI for the user. The design was much more realistic and 
+My reason for changing the design from its original model was so that it provided a more friendly UI for the user. The design was much more realistic and 
 could be implemented compared to previous designs made by myself. The designs on some of the paes may differ from the original doc, 
 but they do operate in a similiar manner.
 

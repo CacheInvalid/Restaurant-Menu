@@ -9,6 +9,7 @@ However, some features within this projet dont work as well as they should such 
 although i know how to rectify them, i ran out of time and need to submit my project to meet the deadline.
 
 A test case doc is included in this upload too
+A live link to the site: https://cacheinvalid.github.io/Restaurant-Menu/
 
 
 The new features that are added to this are: 
@@ -16,3 +17,11 @@ The new features that are added to this are:
 - Log in Avatar that takes user to the logging page from the landing page
 - Hovering Cards implemented. JS implemented to ensure that hover feature is included 
 - View Hours Section with hours visible. Button is also included to take user home
+
+
+
+My reason for changng the design from its original model was so that it provided a more friendly UI for the user. The design was much more realistic and 
+could be implemented compared to previous designs made by myself. The designs on some of the paes may differ from the original doc, 
+but they do operate in a similiar manner.
+
+UPDATE------> chef special feature has been implemented

@@ -39,6 +39,14 @@ Update the Menu
       <p>
          {{allergy}}
       </p>
+      <span>
+    {{#chefPick}}
+        chefPick <!-- If {chefPick: true} --->
+    {{/chefPick}}
+    {{^chefPick}}
+        NotchefPick <!-- If {chefPick: false} --->
+    {{/chefPick}}
+</span>
       <button>{{price}}</button>
     </figcaption><a href="#"></a>
   </figure>
@@ -51,4 +59,5 @@ Update the Menu
         {{/entries}}
     </body>
 </html>
+
 

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/reastrauntControllers.js');
 router.get("/menu.html", controller.menu_page);
+router.get('/json', controller.menu_page_json);  
 router.get('/reastraunt', controller.entries_list);
 
 const auth = require('../auth/auth.js');
@@ -11,12 +12,13 @@ router.get("/", controller.landing_page);
 
 router.get('/reastraunt', controller.entries_list);
 
-//router.get('/new', controller.new_entry);
+//router.get('/new', controller.new_entries);
 //router.get('/new', controller.show_new_entries);
-router.get('/new', ensureLoggedIn('/register'),controller.show_new_entries);
+router.get('/new', ensureLoggedIn('/register'), controller.show_new_entries);
 //router.post('/new', controller.post_new_entry);
 router.post('/new', ensureLoggedIn('/register'), controller.post_new_entry);
-router.get('/new', ensureLoggedIn('/register'),controller.Update_menu_page);
+router.get('/update', ensureLoggedIn('/register'), controller.Update_menu_page);
+router.get('/json', controller.menu_page_json);  
 
 router.get('/register', controller.show_register_page);
 

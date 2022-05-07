@@ -36,6 +36,18 @@ exports.landing_page = function(req, res) {
 
             }*/
 
+            exports.menu_page_json = function(req, res) {
+                db.getAllEntries()
+                    .then((list) => {
+                        res.send(list);
+                        console.log(list);
+                        console.log('json endpoint set up');
+                    })
+                    .catch((err) => {
+                        console.log('promise rejected', err);
+                    })
+            }
+
             exports.menu_page = function(req, res) 
             {
                 db.getAllEntries()
@@ -73,7 +85,8 @@ exports.new_entry = function(req, res) {
          }
 
 
-         exports.new_entries = function(req, res) {
+         exports.new_entries = function(req, res)
+       {
             res.render('newEntry', {
             'title': 'Menu'
             })
@@ -85,7 +98,7 @@ exports.new_entry = function(req, res) {
             response.status(400).send("Entries must have a name.");
             return;
             }
-            db.addEntry(req.body.name, req.body.description, req.body.ingredients, req.body.allergy);
+            db.addEntry(req.body.name, req.body.description, req.body.ingredients, req.body.allergy, reg.body.chef, reg.body.price);
             res.redirect('/');
         }
         
@@ -118,23 +131,12 @@ exports.new_entry = function(req, res) {
             res.redirect('/hours.html');
         }
 
-exports.post_new_entry = function(req, res) {
-    console.log('processing post-new_entry controller');
-    if (!req.body.author) {
-        response.status(400).send("Entries must have an author.");
-    return;
-    }
-    db.addEntry(req.body.author, req.body.subject, req.body.contents);
-    res.redirect('/');
-}
-
-
  exports.show_user_entries = function(req, res) {
-        let user = req.params.author;
+        let user = req.params.name;
         db.getEntriesByUser(user)
         .then((entries) => {
             res.render('entries', {
-                'title': 'Guest Book',
+                'title': 'Menu',
                 'user': req.user,
                 'entries': entries
             });
@@ -196,5 +198,7 @@ exports.logout = function(req, res) {
 
             }).catch((err) => {
                 console.log('promise rejected', err);
+                 })
+}promise rejected', err);
                  })
 }

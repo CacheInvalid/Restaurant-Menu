@@ -15,8 +15,14 @@ although i know how to rectify them, i ran out of time and need to submit my pro
 
 ## Additional Information
 A test case doc is included in this upload too
-A live link to the site: https://cacheinvalid.github.io/Restaurant-Menu/
 
+## Live Links
+ ```
+ http://localhost:3000/
+  ``` 
+  ``` 
+  https://cacheinvalid.github.io/Restaurant-Menu/
+  ``` 
 
 ## Extra Features that have been implemented
 - Logging Page dedicated to either logging in, signing in, or viewing menu
